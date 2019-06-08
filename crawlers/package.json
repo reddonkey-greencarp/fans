@@ -6,6 +6,7 @@
   "author": "colinaaa",
   "license": "MIT",
   "dependencies": {
+    "express": "^4.17.1",
     "got": "^9.6.0"
   }
 }
