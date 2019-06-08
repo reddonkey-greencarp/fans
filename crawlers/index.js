@@ -39,7 +39,7 @@ app.get('/weibo/star', (req, res) => {
   });
 });
 
-app.get('/weibo/star/foller', (req, res) => {
+app.get('/weibo/star/follower', (req, res) => {
   weiboFollowers().then(data => {
     res.send(data);
   });
