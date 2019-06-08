@@ -28,7 +28,7 @@ module.exports = (keyword = '杨超越') => {
           link: `http://s.weibo.com/weibo/${encodeURIComponent(
             keyword
           )}&b=1&nodup=1`,
-          item: data.map(item => {
+          items: data.map(item => {
             return {
               createdAt: item.mblog.created_at,
               content: util.format(item.mblog),

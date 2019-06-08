@@ -40,7 +40,7 @@ module.exports = (uid = '5644764907') => {
           title: `${name}的微博`,
           link: `http://weibo.com/${uid}/`,
           image: profileImageUrl,
-          item: resp.body.data.cards
+          items: resp.body.data.cards
             .filter(
               item =>
                 item.mblog && !item.mblog.isTop && !item.mblog.retweeted_status
