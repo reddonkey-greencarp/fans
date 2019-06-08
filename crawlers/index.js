@@ -3,6 +3,7 @@ const weiboKeyword = require('./routes/weibo/keyword');
 const weiboStar = require('./routes/weibo/starPost');
 const weiboFollowers = require('./routes/weibo/star');
 const doubanGroup = require('./routes/douban/group');
+const zhihuQuestion = require('./routes/zhihu/question');
 const express = require('express');
 const app = express();
 
@@ -60,6 +61,14 @@ app.get('/weibo/star/follower', (req, res) => {
 
 app.get('/douban/group', (req, res) => {
   doubanGroup()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
+});
+
+app.get('/zhihu/question', (req, res) => {
+  zhihuQuestion()
     .then(data => {
       res.send(data);
     })
