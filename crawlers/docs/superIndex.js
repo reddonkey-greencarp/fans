@@ -1,0 +1,8 @@
+let data = {
+  title: '微博超话 - 杨超越',
+  link:
+    'https://weibo.com/p/1008082a98366b6a3546bd16e9da0571e34b84/super_index',
+  description: '#杨超越# 的超话',
+  detile: '阅读230.1亿　帖子47.9万　粉丝57.2万,加关注签到发帖得经验值>>',
+  rank: '明星榜No.18',
+};
