@@ -1,26 +1,33 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { createBrowserHistory as createHistory } from 'history';
+import React, { PureComponent } from 'react';
+import { Provider } from 'react-redux';
+import { BrowserRouter as Router } from 'react-router-dom';
+import { applyMiddleware, createStore } from 'redux';
+import { composeWithDevTools } from 'redux-devtools-extension';
 
-const App: React.FC = () => {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import { epicMiddleware, epics } from './epics';
+import { reducers } from './reducers';
+import Index from './views/Index';
+
+createHistory();
+
+const middleware = [epicMiddleware];
+
+export const store = createStore(reducers, composeWithDevTools(applyMiddleware(...middleware)));
+
+epicMiddleware.run(epics);
+
+class App extends PureComponent {
+
+    render() {
+        return (
+            <Provider store={store}>
+                <Router>
+                    <Index />
+                </Router>
+            </Provider>
+        );
+    }
 }
 
 export default App;
