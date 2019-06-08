@@ -2,17 +2,7 @@ import React, { Component } from 'react'
 import styles from './styles.module.scss'
 import backImg from './ycy-text.png'
 import titleImg from './title.png'
-let classNames = require('classnames');
 
-class Bubble extends Component {
-  render() {
-    return (
-      <div>
-        ggg
-      </div>
-    )
-  }
-}
 
 
 
@@ -47,7 +37,7 @@ export default class Support extends Component {
             fromBottom: 1,
           })
         }
-      }, 10)
+      }, 15)
     }
 
 
@@ -72,13 +62,13 @@ export default class Support extends Component {
             fromBottom: 1,
           })
         }
-      }, 10)
+      }, 15)
     }
   }
   render() {
     return (
       <div>
-        ggs
+        {/* ggs */}
         <div className={styles.wrapper} ref="main">
           <div className={styles.mask} ref="mask">
           </div>

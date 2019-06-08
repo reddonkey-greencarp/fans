@@ -43,7 +43,8 @@ $absolute-top: 20%;
   background: #402D7F;
   margin: 0;
   overflow: hidden;
-  background: url("./back.png")
+  background: url("./back.png");
+  position: relative;
 }
 
 .frontBorder,
@@ -114,6 +115,7 @@ $absolute-top: 20%;
   color: #F5BAAD;
   margin: 0px;
   padding: 0px;
+  font-size: 25px;
   line-height: $btn-height;
 }
 
