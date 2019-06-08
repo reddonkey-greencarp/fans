@@ -12,5 +12,13 @@ module.exports = async (questionId = '281732460') => {
     },
     json: true,
   });
-  return resp.body;
+  return resp.body.data.map(item => {
+    return {
+      question: item.question.title,
+      questionURL: item.question.url,
+      author: item.author.name,
+      url: item.url,
+      content: item.content,
+    };
+  });
 };
