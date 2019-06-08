@@ -1,0 +1,129 @@
+$img-width: 390px;
+$img-margin: 20px;
+$img-bottom: 16%;
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+.wrapper {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  position: relative;
+  background: url("./back.png") no-repeat -100px -43px;
+}
+
+.imgWrapper {
+
+  width: 80%;
+  margin: 0 auto;
+  height: 100vh;
+}
+
+.imageStyle {
+  display: none;
+}
+
+.fromBottom1 {
+  position: absolute;
+  left: 10%;
+  bottom: 0.8 * $img-bottom;
+  width: $img-width;
+  margin: $img-margin;
+
+
+  @include animation('fromBottom1 1s 1');
+  transition: all ease .5s;
+
+  &:hover {
+    transform: translateY(-100px);
+  }
+}
+
+.fromBottom2 {
+  position: absolute;
+  left: 40%;
+  bottom: 1.0 * $img-bottom;
+  width: $img-width;
+  margin: $img-margin;
+  @include animation('fromBottom2 1s 1');
+  transition: all ease .5s;
+
+  &:hover {
+    transform: translateY(-100px);
+  }
+}
+
+.fromBottom3 {
+  position: absolute;
+  left: 70%;
+  bottom: 1.7 * $img-bottom;
+  width: $img-width;
+  margin: $img-margin;
+  @include animation('fromBottom3 1s 1');
+  transition: all ease .5s;
+
+  &:hover {
+    transform: translateY(-100px);
+  }
+}
+
+
+
+@include keyframes(fromBottom1) {
+  from {
+    bottom: -$img-bottom;
+  }
+
+  to {
+    bottom: .8 * $img-bottom;
+  }
+}
+
+
+@include keyframes(fromBottom2) {
+  from {
+    bottom: -$img-bottom;
+  }
+
+  to {
+    bottom: 1.0 * $img-bottom;
+  }
+}
+
+@include keyframes(fromBottom3) {
+  from {
+    bottom: -$img-bottom;
+  }
+
+  to {
+    bottom: 1.7 * $img-bottom;
+  }
+}
