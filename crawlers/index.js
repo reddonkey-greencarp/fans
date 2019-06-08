@@ -1,6 +1,7 @@
 const superIndex = require('./routes/weibo/superIndex');
 const weiboKeyword = require('./routes/weibo/keyword');
-const weiboStar = require('./routes/weibo/star');
+const weiboStar = require('./routes/weibo/starPost');
+const weiboFollowers = require('./routes/weibo/star');
 const express = require('express');
 const app = express();
 
@@ -34,6 +35,12 @@ app.get('/weibo/keyword', (req, res) => {
 
 app.get('/weibo/star', (req, res) => {
   weiboStar().then(data => {
+    res.send(data);
+  });
+});
+
+app.get('/weibo/star/foller', (req, res) => {
+  weiboFollowers().then(data => {
     res.send(data);
   });
 });
