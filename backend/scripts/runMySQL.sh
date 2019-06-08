@@ -1,0 +1,1 @@
+docker run --name dev-db -e MYSQL_ROOT_PASSWORD=P@ssw0rd -e MYSQL_DATABASE=dev -d -p 3306:3306 mysql/mysql-server:8.0
