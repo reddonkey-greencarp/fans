@@ -1,0 +1,11 @@
+{
+  "name": "fans-crawlers",
+  "version": "1.0.0",
+  "description": "the crawlers for fans",
+  "main": "index.js",
+  "author": "colinaaa",
+  "license": "MIT",
+  "dependencies": {
+    "got": "^9.6.0"
+  }
+}
