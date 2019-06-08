@@ -59,6 +59,16 @@ $absolute-top: 20%;
 .frontBorder {
   position: relative;
   z-index: 20;
+  font-weight: bold;
+  transition: all linear .2s;
+
+  &:hover>p {
+    color: #402d7f;
+  }
+
+  &:hover {
+    background: #F5BAAD;
+  }
 }
 
 
