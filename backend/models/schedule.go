@@ -7,11 +7,11 @@ import (
 // Schedule is the struct of a schedule
 type Schedule struct {
 	gorm.Model   `json:"-"`
-	Notification string      `json:"notification" binding:"required"`
+	Notification string      `json:"notification" binding:"omitempty"`
 	Event        Event       `json:"event" binding:"omitempty"`
 	Concert      Concert     `json:"concert" binding:"omitempty"`
 	Fundraising  Fundraising `json:"fundraising" binding:"omitempty"`
-	Purcharsing  Purcharsing `json:"purcharsing" binding:"omitempty"`
+	Purchasing   Purcharsing `json:"purchasing" binding:"omitempty"`
 }
 
 // Concert is the event for concert

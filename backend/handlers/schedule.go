@@ -28,7 +28,7 @@ func Schedule(c *gin.Context) {
 		Preload("Event").
 		Preload("Concert").
 		Preload("Fundraising").
-		Preload("Purcharsing").
+		Preload("Purchasing").
 		Find(schedules).Error; err != nil {
 		dbWrong(c, err, "get schedule", "")
 		return

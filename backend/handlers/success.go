@@ -7,14 +7,14 @@ import (
 )
 
 func simpleOK(c *gin.Context) {
-	c.JSON(http.StatusOK, gin.H{"message": "Success"})
+	c.JSON(http.StatusOK, gin.H{"type": "success"})
 	return
 }
 
 func okWithData(c *gin.Context, data interface{}) {
 	c.JSON(http.StatusOK, gin.H{
-		"message": "Success",
-		"data":    data,
+		"type": "success",
+		"data": data,
 	})
 	return
 }
