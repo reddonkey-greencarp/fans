@@ -1,4 +1,5 @@
 const got = require('got');
+const util = require('./utils');
 
 module.exports = (keyword = '杨超越') => {
   return new Promise((resolve, reject) => {
@@ -30,8 +31,13 @@ module.exports = (keyword = '杨超越') => {
           item: data.map(item => {
             return {
               createdAt: item.mblog.created_at,
-              content: item.mblog.text,
+              content: util.format(item.mblog),
+              pic:
+                item.mblog.pics instanceof Array && item.mblog.pics.length > 0
+                  ? item.mblog.pics[0].large.url
+                  : null,
               comments: item.mblog.comments_count,
+              likes: item.mblog.attitudes_count,
               link: `https://weibo.com/${item.mblog.user.id}/${item.mblog.bid}`,
             };
           }),
