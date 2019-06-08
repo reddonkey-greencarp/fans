@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import styles from './styles.module.scss';
 import ycy from './ycy.png';
+import menuIcon from './menu.png'
+import Stat from './Stat'
 
 class Navigation extends Component {
     render() {
@@ -8,7 +10,7 @@ class Navigation extends Component {
             <div className={styles.navigation}>
                 <NavItemArea/>
                 <div className={styles.menu}>
-                    <p>三</p>
+                    <img src={menuIcon} alt={"menu icon"}/>
                 </div>
             </div>
         )
@@ -38,14 +40,18 @@ class IdolBanner extends Component {
     render() {
         return (
             <div className={styles.idolBanner}>
-                <h1 className={styles.idolName}>Yang Chaoyue</h1>
+                <div className={styles.idolName}>
+                    <h1>Yang<br />ChaoYue</h1>
+                    <h1 className={styles.idolNameShadow}>Yang<br />ChaoYue</h1>
+                </div>
                 <div className={styles.voteButton}>
                     <button>Vote For Her</button>
                     <div className={styles.buttonShadow} />
                 </div>
                 <div className={styles.idolImage}>
-                    <img src={ycy}/>
-                    <div className={styles.imgShadow} />
+                    <div className={styles.imgWrapper}>
+                        <img src={ycy} alt={"idol pic"}/>
+                    </div>
                 </div>
             </div>
         )
@@ -56,8 +62,9 @@ export default class Idol extends Component {
     render() {
         return (
             <div className={styles.wrapper}>
-                <Navigation/>
-                <IdolBanner/>
+                {/*<Navigation/>*/}
+                {/*<IdolBanner/>*/}
+                <Stat />
             </div>
         )
     }

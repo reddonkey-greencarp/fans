@@ -46,7 +46,7 @@ class Idol extends Component {
     render(){
         return (
             <div className={styles.idol}>
-                <img className={styles.avatar} src={cxk} />
+                <img className={styles.avatar} src={cxk} alt={"idol avatar"} />
                 <p className={styles.name}>Cai Xukun</p>
             </div>
         )
