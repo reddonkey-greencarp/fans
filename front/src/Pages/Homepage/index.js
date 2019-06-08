@@ -1,0 +1,65 @@
+import React,{Component} from 'react';
+import styles from './styles.module.scss';
+import searchIcon from './searchIcon.svg';
+import cxk from './cxk.jpg'
+
+class SearchBar extends  Component {
+    render() {
+        return (
+            <div className={styles.searchBar}>
+                <div className={styles.searchIcon}>
+                    <img src={searchIcon} alt={"search icon"}/>
+                </div>
+                <div className={styles.searchText}>
+                    <input placeholder={"你关注的爱豆"} />
+                </div>
+            </div>
+        )
+    }
+}
+
+class Search extends Component {
+    render(){
+        return (
+            <div className={styles.wrapper}>
+                <h1 className={styles.homepage}>FFFFFIRE</h1>
+                <SearchBar />
+            </div>
+
+        );
+    }
+}
+
+class IdolWrapper extends Component {
+    render(){
+        return (
+            <div className={styles.idolArea}>
+                <Idol />
+                <Idol />
+                <Idol />
+            </div>
+        )
+    }
+}
+
+class Idol extends Component {
+    render(){
+        return (
+            <div className={styles.idol}>
+                <img className={styles.avatar} src={cxk} alt={"idol avatar"} />
+                <p className={styles.name}>Cai Xukun</p>
+            </div>
+        )
+    }
+}
+
+export default class Homepage extends Component {
+    render(){
+        return (
+            <div>
+                <Search />
+                <IdolWrapper />
+            </div>
+        )
+    }
+}

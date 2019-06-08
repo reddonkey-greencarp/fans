@@ -1,0 +1,98 @@
+@font-face {
+  font-family: 'Splatch Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Splatch Regular'), url('./Splatch.woff') format('woff');
+}
+
+h1.homepage {
+  margin-top: 15vh;
+  font-size:72px;
+  font-family: 'Splatch Regular';
+  font-weight:400;
+  line-height:48px;
+  color:rgba(186,80,80,1);
+  opacity:1;
+
+}
+
+.wrapper {
+  .searchBar{
+    display: flex;
+    align-items: center;
+    //width:803px;
+    margin: 0 24vw;
+    height:72px;
+    background:rgba(255,255,255,1);
+    box-shadow:0px 6px 20px rgba(222,104,104,0.2);
+    opacity:1;
+    border-radius:65px;
+    text-align: left;
+    &:after {
+      content: "";
+      position: absolute;
+      margin: 12px 0 0 4px;
+      //margin: 0 20vw;
+      height:72px;
+      width:52vw;
+      border:2px solid rgba(186,80,80,1);
+      border-radius: 65px;
+      z-index: -10;
+    }
+    .searchIcon {
+      margin-left: 16px;
+      display: flex;
+      width: 48px;
+      height: 100%;
+      img {
+        width: 100%;
+      }
+    }
+    .searchText{
+      margin-left: 16px;
+      input {
+        //height: 100%;
+        //margin: 5% 0;
+        color: #BA5050;
+        font-size: 24px;
+        border: none;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      }
+    }
+  }
+}
+
+.idolArea {
+  //width: 80%;
+  margin: 10vh 10%;
+  display: flex;
+  align-items: center;
+  .idol {
+    flex:1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .avatar{
+      width:10vw;
+      height:10vw;
+      background:rgba(0,0,0,0);
+      border:4px solid rgba(255,255,255,1);
+      border-radius:50%;
+      opacity:1;
+    }
+    .name {
+      width:152px;
+      height:97px;
+      font-size:36px;
+      font-family: -apple-system, BlinkMacSystemFont, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+      font-weight:900;
+      font-style: italic;
+      line-height:48px;
+      -webkit-text-stroke:1px rgba(186,80,80,1);
+      //text-stroke:1 rgba(186,80,80,1);
+      color: #00000000;
+      opacity:1;
+
+    }
+  }
+}

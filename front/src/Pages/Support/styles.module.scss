@@ -1,0 +1,192 @@
+$btn-height: 50px;
+$btn-width: 350px;
+
+$absolute-left: 19%;
+$absolute-bottom: 20%;
+$absolute-right: 16%;
+$absolute-top: 20%;
+
+@mixin keyframes($animation-name) {
+  @-webkit-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-moz-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-ms-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @-o-keyframes #{$animation-name} {
+    @content;
+  }
+
+  @keyframes #{$animation-name} {
+    @content;
+  }
+}
+
+@mixin animation($str) {
+  -webkit-animation: #{$str};
+  -moz-animation: #{$str};
+  -ms-animation: #{$str};
+  -o-animation: #{$str};
+  animation: #{$str};
+}
+
+
+
+.wrapper {
+  height: 100vh;
+  background: #402D7F;
+  margin: 0;
+  overflow: hidden;
+  background: url("./back.png");
+  position: relative;
+}
+
+.frontBorder,
+.backBorder {
+  margin-top: 20px;
+  border: 1px solid #F5BAAD;
+  border-radius: 43pt;
+  width: $btn-width;
+  height: $btn-height;
+  background: #402d7f;
+}
+
+.frontBorder {
+  position: relative;
+  z-index: 20;
+  font-weight: bold;
+  transition: all linear .2s;
+
+  &:hover>p {
+    color: #402d7f;
+  }
+
+  &:hover {
+    background: #F5BAAD;
+  }
+}
+
+
+// innerText
+.btnWrapper {
+  display: none;
+}
+
+.fromRight {
+  position: absolute;
+  bottom: $absolute-bottom + 2%;
+  right: $absolute-right+1%;
+  @include animation('fromLeft 0.5s 1')
+}
+
+@include keyframes(fromLeft) {
+  from {
+    right: -$absolute-right
+  }
+
+  to {
+    right: $absolute-right
+  }
+}
+
+.innerText p {
+  color: #F5BAAD;
+  margin: 0;
+  text-align: right;
+  font-size: 20px;
+}
+
+.btnWrapper {
+  width: $btn-width
+}
+
+.btnInner {
+  position: relative;
+  margin-top: 50px;
+}
+
+.frontBorder>p {
+  color: #F5BAAD;
+  margin: 0px;
+  padding: 0px;
+  font-size: 25px;
+  line-height: $btn-height;
+}
+
+.backBorder {
+  margin: 0;
+  position: absolute;
+  left: 5px;
+  top: 5px;
+}
+
+
+
+// mask
+.mask {
+  background: #402D7F;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+}
+
+
+// ycyText
+.ycyText {
+  // url("./ycy-name.svg");
+  // width: 500px;
+  // position: absolute;
+  // bottom: 20%;
+  // left: 20%;
+  display: none;
+}
+
+.fromBottom {
+  width: 550px;
+  position: absolute;
+  bottom: $absolute-bottom;
+  left: 19%;
+  @include animation('fromBottom 1s 1')
+}
+
+@include keyframes(fromBottom) {
+  from {
+    bottom: -$absolute-bottom
+  }
+
+  to {
+    bottom: $absolute-bottom
+  }
+}
+
+
+// titleImg
+
+.titleText {
+  display: none;
+}
+
+
+.fromTop {
+  width: 650px;
+  position: absolute;
+  top: $absolute-top;
+  right: $absolute-right;
+  @include animation('fromTop 1s 1')
+}
+
+@include keyframes(fromTop) {
+  from {
+    top: -20%
+  }
+
+  to {
+    top: $absolute-top
+  }
+}
