@@ -1,0 +1,126 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url("./OpenSans-ExtraBoldItalic.ttf");
+}
+.wrapper {
+  background: #402D7F;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.main {
+  width: 70%;
+  height: 70%;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 27px;
+  justify-content: space-between;
+}
+
+.title {
+  position: relative;
+  top: 10px;
+  left: 10px;
+  width: 150px;
+  height: 63px;
+  background: #F5BAAD;
+  color: #402D7F;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.title::after {
+  content: '';
+  position: absolute;
+  border: 2px solid #F5BAAD;
+  height: 63px;
+  width: 150px;
+  top: -10px;
+  left: -10px;
+  z-index: 10;
+}
+
+.table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #F5BAAD;
+  flex: 1;
+  background: #402D7F;
+  z-index: 1000;
+}
+
+.image {
+  width: 80%;
+}
+
+.navigation {
+  display: flex;
+}
+
+.month {
+  font-size: 15px;
+  line-height: 30px;
+  color: #F5BAAD;
+  margin: 0 40px;
+  display: flex;
+  align-items: flex-end;
+  cursor: pointer;
+}
+
+.monthActive {
+  @extend .month;
+  &::after {
+    content: '';
+    position: absolute;
+    height: 20px;
+    width: 30px;
+    border-bottom: 2px solid #F5BAAD;
+    border-right: 2px solid #F5BAAD;
+  }
+}
+
+.ycy {
+  position: fixed;
+  right: -300px;
+  bottom: -100px;
+}
+
+.yShadow {
+  position: fixed;
+  font-family: 'Open Sans';
+  font-size: 200px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #F5BAAD;
+  right: 80px;
+  bottom: 130px;
+}
+
+.cyShadow {
+  position: fixed;
+  font-family: 'Open Sans';
+  font-size: 200px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 2px #F5BAAD;
+  right: -310px;
+  bottom: -110px;
+}
+
+.homePage {
+  position: fixed;
+  font-family: 'Open Sans';
+  font-size: 32px;
+  color: rgba(0, 0, 0, 0);
+  -webkit-text-stroke: 1px #F5BAAD;
+  left: 50px;
+  top: 20px;
+}
