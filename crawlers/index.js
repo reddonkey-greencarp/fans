@@ -2,6 +2,7 @@ const superIndex = require('./routes/weibo/superIndex');
 const weiboKeyword = require('./routes/weibo/keyword');
 const weiboStar = require('./routes/weibo/starPost');
 const weiboFollowers = require('./routes/weibo/star');
+const doubanGroup = require('./routes/douban/group');
 const express = require('express');
 const app = express();
 
@@ -9,40 +10,60 @@ const port = 3000;
 
 app.get('/weibo/super_index/:id', (req, res) => {
   let { id } = req.params;
-  superIndex(id).then(data => {
-    res.send(data);
-  });
+  superIndex(id)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.get('/weibo/super_index', (req, res) => {
-  superIndex().then(data => {
-    res.send(data);
-  });
+  superIndex()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.get('/weibo/keyword/:key', (req, res) => {
   let { key } = req.params;
-  weiboKeyword(key).then(data => {
-    res.send(data);
-  });
+  weiboKeyword(key)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.get('/weibo/keyword', (req, res) => {
-  weiboKeyword().then(data => {
-    res.send(data);
-  });
+  weiboKeyword()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.get('/weibo/star', (req, res) => {
-  weiboStar().then(data => {
-    res.send(data);
-  });
+  weiboStar()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.get('/weibo/star/follower', (req, res) => {
-  weiboFollowers().then(data => {
-    res.send(data);
-  });
+  weiboFollowers()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
+});
+
+app.get('/douban/group', (req, res) => {
+  doubanGroup()
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
 });
 
 app.listen(port, () => console.log(`running at ${port}`));
