@@ -5,9 +5,12 @@ const weiboFollowers = require('./routes/weibo/star');
 const doubanGroup = require('./routes/douban/group');
 const zhihuQuestion = require('./routes/zhihu/question');
 const express = require('express');
+const cors = require('cors');
 const app = express();
 
-const port = 3000;
+const port = 3001;
+
+app.use(cors());
 
 app.get('/weibo/super_index/:id', (req, res) => {
   let { id } = req.params;
