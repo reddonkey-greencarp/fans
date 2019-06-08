@@ -1,5 +1,6 @@
-import React, {Component} from 'react';
+import React, {PureComponent, Component} from 'react';
 import styles from './styles.module.scss';
+import frStyles from '../Fundraising/styles.module.scss'
 import ycy from './ycy.png';
 import menuIcon from './menu.png'
 import Stat from './Stat'
@@ -33,6 +34,16 @@ class NavItemArea extends Component {
                 )}
             </div>
         )
+    }
+}
+
+class Header extends PureComponent {
+    render() {
+        return (
+            <div className={frStyles.header}>
+                <div className={frStyles.title}>集资去向</div>
+            </div>
+        );
     }
 }
 
