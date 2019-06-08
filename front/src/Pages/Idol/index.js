@@ -62,7 +62,7 @@ export default class Idol extends Component {
     render() {
         return (
             <div className={styles.wrapper}>
-                {/*<Navigation/>*/}
+                <Navigation/>
                 {/*<IdolBanner/>*/}
                 <Stat />
             </div>

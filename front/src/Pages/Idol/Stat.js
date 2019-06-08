@@ -4,10 +4,12 @@ import Mock from 'mockjs';
 
 class StatNum extends Component{
     render() {
+        let {focus} = this.props;
+        let data = this.props.contents[focus];
         return (
             <div className={styles.statArea}>
-                <h3 className={styles.statNum}>1022,0000</h3>
-                <h3 className={styles.statTitle}>Number of fans</h3>
+                <h3 className={styles.statNum}>{data.value}</h3>
+                <h3 className={styles.statTitle}>{data.title}</h3>
             </div>
         )
     }
@@ -20,7 +22,7 @@ class StatScrollItem extends Component {
         return (
             <div
                 style={{
-                    transform: `translateX(${-Math.abs(distance*20)}px) rotateX(${distance*15}deg) skewX(${-distance*5}deg)`,
+                    transform: `translateX(${-Math.abs(distance*40)}px) rotateX(${distance*15}deg) skewX(${-distance*5}deg)`,
                 }}
                 onClick={()=>this.props.handleClick(this.props.index)}
                 className={`${styles.statScrollItem} ${this.props.active ? styles.active: ''}`}>
@@ -58,21 +60,49 @@ class StatScroll extends Component{
     }
 }
 
+class Content {
+    /**
+     *
+     * @param id
+     * @param text
+     * @param type
+     * @param active
+     * @param title
+     * @param value
+     */
+    constructor(id=0,text='text here',type='text',value,active=false,title='Number of fans',){
+        this.id = id;
+        this.text = text;
+        this.type = type;
+        this.active=active;
+        this.title=title;
+        this.value=parseInt(Math.random()*10000000);
+    }
+}
+
 export default class Stat extends Component {
     constructor(props){
         super(props);
-        const contents = Mock.mock({
-            'data|5': [{
-                'id|+1': 0,
-                'text': /[A-Z][a-z]{3,5} [A-Z][a-z]{5,10}/,
-                'active': false,
-                'title': 'Number of fans',
-                'value' : parseInt(Math.random()*10000000)
-            }]
-        });
+        // const contents = Mock.mock({
+        //     'data|5': [{
+        //         'id|+1': 0,
+        //         'text': /[A-Z][a-z]{3,5} [A-Z][a-z]{5,10}/,
+        //         'active': false,
+        //         'title': 'Number of fans',
+        //         'value|100000-10000000' : 1
+        //     }]
+        // });
+        const contents = [
+            new Content(0,'Weibo Followers'),
+            new Content(1,'Zhihu Followers','ranking',['']),
+            new Content(2,'Chaohua Followers'),
+            new Content(3,'Douban Followers'),
+            new Content(4,'Tieba Followers'),
+            new Content(5,'Twitter Followers'),
+        ]
         this.state = {
             focus:3,
-            contents: contents.data,
+            contents
         };
 
     }
@@ -80,16 +110,32 @@ export default class Stat extends Component {
         this.setState({focus})
     }
     render() {
-
-        this.state.contents[this.state.focus].active=true;
+        let activeContent =this.state.contents[this.state.focus];
+        activeContent.active=true;
 
         return (
             <div className={styles.statWrapper}>
 
                 <div className={styles.cardWrapper}>
                     <div className={styles.cardBackground}>
-                        <div className={styles.cardIcon} />
-                        <StatNum />
+                        {activeContent.type === 'text' &&
+                        <div
+                            style={{width:'100%',height:'100%'}}>
+                            <div className={styles.cardIcon} />
+                            <StatNum
+                                focus={this.state.focus}
+                                contents ={this.state.contents}
+                            />
+                        </div>}
+                        {activeContent.type === 'ranking' &&
+                        <div
+                            style={{width:'100%',height:'100%'}}>
+                            <div className={styles.cardIcon} />
+                            <StatNum
+                                focus={this.state.focus}
+                                contents ={this.state.contents}
+                            />
+                        </div>}
                     </div>
                 </div>
 

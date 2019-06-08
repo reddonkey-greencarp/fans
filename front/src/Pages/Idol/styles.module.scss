@@ -291,8 +291,8 @@
           -webkit-text-stroke: unset;
            white-space: nowrap;
           text-overflow: clip;
-          animation: marquee 10s linear infinite;
-          animation-fill-mode: forwards;
+          animation: marquee 20s linear infinite;
+          animation-fill-mode: backwards;
           animation-direction: alternate-reverse;
           //width: 170px;
 

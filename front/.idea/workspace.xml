@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7a9dc9-d9ca-43e9-9e70-dcf4af115150" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Pages/Idol/Stat.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Homepage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Homepage/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Idol/Stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/Stat.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Idol/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Idol/ycy.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/ycy.png" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -34,11 +31,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="509">
-                  <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
+                <state relative-caret-position="278">
+                  <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                     <element signature="n#Navigation#0" />
@@ -69,11 +66,11 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/Stat.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="433">
-                  <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+                <state relative-caret-position="-816">
+                  <caret line="96" column="57" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                   </folding>
@@ -136,8 +133,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="343">
-                  <caret line="279" column="25" selection-start-line="279" selection-start-column="25" selection-end-line="279" selection-end-column="25" />
+                <state relative-caret-position="1180">
+                  <caret line="293" column="30" selection-start-line="293" selection-start-column="30" selection-end-line="293" selection-end-column="30" />
                   <folding>
                     <element signature="e#116#1639#0" />
                     <element signature="e#1718#3052#0" />
@@ -180,16 +177,16 @@
         <option value="$PROJECT_DIR$/src/Pages/Homepage/index.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/statistics.js" />
         <option value="$PROJECT_DIR$/src/playground/mocktest.js" />
-        <option value="$PROJECT_DIR$/src/Pages/Idol/index.js" />
-        <option value="$PROJECT_DIR$/src/Pages/Idol/Stat.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" />
+        <option value="$PROJECT_DIR$/src/Pages/Idol/Stat.js" />
+        <option value="$PROJECT_DIR$/src/Pages/Idol/index.js" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="2728" />
-    <option name="width" value="1294" />
-    <option name="height" value="1409" />
+    <option name="x" value="2724" />
+    <option name="width" value="1303" />
+    <option name="height" value="1413" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -276,21 +273,20 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="39724000" />
+    <option name="totallyTimeSpent" value="44785000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2729" y="-7" width="2062" height="1136" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15893386" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15893386" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25664622" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25664622" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
       <window_info anchor="bottom" id="Message" order="4" />
-      <window_info anchor="bottom" id="Find" order="5" />
+      <window_info anchor="bottom" id="Find" order="5" weight="0.32924336" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.32924336" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
@@ -400,18 +396,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="509">
-          <caret line="66" column="24" lean-forward="true" selection-start-line="66" selection-start-column="24" selection-end-line="66" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-            <element signature="n#Navigation#0" />
-            <element signature="n#NavItemArea#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -429,23 +413,34 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1054">
+          <caret line="274" column="16" selection-start-line="274" selection-start-column="16" selection-end-line="274" selection-end-column="16" />
+          <folding>
+            <element signature="e#172#1334#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/Idol/Stat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="433">
-          <caret line="22" column="93" selection-start-line="22" selection-start-column="93" selection-end-line="22" selection-end-column="93" />
+        <state relative-caret-position="-816">
+          <caret line="96" column="57" selection-start-line="96" selection-start-column="57" selection-end-line="96" selection-end-column="57" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
+    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="279" column="25" selection-start-line="279" selection-start-column="25" selection-end-line="279" selection-end-column="25" />
+        <state relative-caret-position="278">
+          <caret line="65" column="29" lean-forward="true" selection-start-line="65" selection-start-column="29" selection-end-line="65" selection-end-column="29" />
           <folding>
-            <element signature="e#116#1639#0" />
-            <element signature="e#1718#3052#0" />
+            <element signature="e#0#39#0" expanded="true" />
+            <element signature="n#Navigation#0" />
+            <element signature="n#NavItemArea#0" />
           </folding>
         </state>
       </provider>
