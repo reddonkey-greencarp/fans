@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import styles from './styles.module.scss';
+import ycy from './ycy.png';
 
 class Navigation extends Component {
     render() {
@@ -36,18 +37,19 @@ class NavItemArea extends Component {
 class IdolBanner extends Component {
     render() {
         return (
-            <div className={styles.idolBannner}>
+            <div className={styles.idolBanner}>
                 <h1 className={styles.idolName}>Yang Chaoyue</h1>
                 <div className={styles.voteButton}>
                     <button>Vote For Her</button>
                     <div className={styles.buttonShadow} />
                 </div>
                 <div className={styles.idolImage}>
-                    <img src={''}/>
+                    <img src={ycy}/>
+                    <div className={styles.imgShadow} />
                 </div>
             </div>
         )
-
+}
 }
 
 export default class Idol extends Component {

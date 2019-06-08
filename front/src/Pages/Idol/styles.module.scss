@@ -72,8 +72,10 @@
     }
   }
   .idolBanner {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    position: relative;
     .idolName {
-
+      font-size: 5vw;
     }
     .voteButton {
       button{
@@ -84,11 +86,22 @@
       }
     }
     .idolImage {
-      img{
-
+      position: absolute;
+      right: 20vw;
+      top:0;
+      max-height: 60vh;
+      max-width: 30vw;
+      overflow: hidden;
+      img {
+        width: 100%;
       }
-      .imgShadow {
 
+      .imgShadow {
+          position: absolute;
+          content: "";
+          height: 60vh;
+          width: 40vw;
+          border:2px solid rgba(245,186,173,1);
       }
     }
   }

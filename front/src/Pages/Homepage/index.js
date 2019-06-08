@@ -8,7 +8,7 @@ class SearchBar extends  Component {
         return (
             <div className={styles.searchBar}>
                 <div className={styles.searchIcon}>
-                    <img src={searchIcon} />
+                    <img src={searchIcon} alt={"search icon"}/>
                 </div>
                 <div className={styles.searchText}>
                     <input placeholder={"你关注的爱豆"} />
@@ -22,7 +22,7 @@ class Search extends Component {
     render(){
         return (
             <div className={styles.wrapper}>
-                <h1>FFFFFIRE</h1>
+                <h1 className={styles.homepage}>FFFFFIRE</h1>
                 <SearchBar />
             </div>
 
