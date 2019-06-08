@@ -1,7 +1,7 @@
 const got = require('got');
 const util = require('./utils');
 
-module.exports = uid => {
+module.exports = (uid = '5644764907') => {
   return new Promise(async (resolve, reject) => {
     const containerResp = await got.get({
       url: `https://m.weibo.cn/api/container/getIndex`,
