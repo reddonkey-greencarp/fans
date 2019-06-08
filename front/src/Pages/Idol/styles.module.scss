@@ -300,4 +300,70 @@
       }
     }
   }
+
+  .idolWeiboWrapper {
+    width: 100%;
+    .idolWeibo {
+      color: white;
+      width: 100%;
+      //margin: 0 10%;
+      .card {
+        height: 40vh;
+        width: 90%;
+        border: 1px solid rgba(245, 186, 173, 1);
+        margin: 5vw;
+        color: #F5BAAD;
+        background: #402d7f;
+        box-shadow: 16px 16px 0px #F5BAAD;
+        //display: flex;
+        .wrapper {
+          display: flex;
+          width: 100%;
+          height: 100%;
+          .content {
+            flex: 0 0 60%;
+            font-size:1.5vw;
+            font-weight:300;
+            text-align: left;
+            margin: 10%;
+            line-height:43px;
+            color:rgba(245,186,173,1);
+            opacity:1;
+
+          }
+          .avatar {
+            flex: 0 0 40%;
+            img {
+            }
+          }
+        }
+
+        .cardFooter {
+          position: absolute;
+          display: flex;
+          bottom: 0;
+          padding: 0 5vw;
+          .func {
+            border: 1px solid rgba(245, 186, 173, 1);
+            width: 8vw;
+            height: 8vw;
+            margin: 0 1vw;
+            background: #402d7f;
+            display: flex;
+            flex-direction: column;
+            img {
+              margin: 6% 20% 2%;
+              width: 60%;
+            }
+            p {
+              margin: 0;
+              font-weight: 600;
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+  }
+
 }
