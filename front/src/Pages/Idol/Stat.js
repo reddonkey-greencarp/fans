@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import styles from './styles.module.scss';
 import Mock from 'mockjs';
 
-import  ycy from './ycy.png'
+import ycy from './ycy.png'
 
 const follwoers = require('../../api/weibo/followers');
 const superIndex = require('../../api/weibo/superIndex');
@@ -33,16 +33,16 @@ class StatNum extends Component{
 class StatScrollItem extends Component {
     render(){
         console.log(this.props);
-        let distance = (this.props.index - this.props.focus);
+        let distance = (this.props.offline - this.props.focus);
         return (
             <div
                 style={{
                     transform: `translateX(${-Math.abs(distance*40)}px) rotateX(${distance*15}deg) skewX(${-distance*5}deg)`,
                 }}
-                onClick={()=>this.props.handleClick(this.props.index)}
+                onClick={()=>this.props.handleClick(this.props.offline)}
                 className={`${styles.statScrollItem} ${this.props.active ? styles.active: ''}`}>
                     <h1>
-                        {!this.props.active && <small>{this.props.index || 0} </small>}
+                        {!this.props.active && <small>{this.props.offline || 0} </small>}
                         {this.props.text && this.props.active
                             ?  `${this.props.text} ${this.props.text} ${this.props.text} ${this.props.text} `
                             : this.props.text}

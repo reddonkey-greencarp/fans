@@ -57,7 +57,7 @@ class Idol extends Component {
 export default class Homepage extends Component {
     render(){
         return (
-            <div style={{minHeight: '100vh',width:'100%'}
+            <div style={{minHeight: '100vh',width:'100%',overflowY:'hidden'}
 
             }>
                 <Search />

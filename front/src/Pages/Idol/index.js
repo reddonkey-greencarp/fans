@@ -12,11 +12,12 @@ import weiboRwd from './weibo_reward.png';
 import weiboCmt from './weibo_cmt.png';
 
 import Stat from './Stat'
+import Offline from './offline.js'
 import Fundraising from "../Fundraising";
 
 const starPost = require('../../api/weibo/starPost');
 
-class Navigation extends Component {
+export class Navigation extends Component {
     render() {
         return (
             <div className={styles.navigation}>
@@ -48,11 +49,11 @@ class NavItemArea extends Component {
     }
 }
 
-class Header extends PureComponent {
+class Header extends Component {
     render() {
         return (
             <div className={frStyles.header}>
-                <div className={frStyles.title}>最近发博</div>
+                <div className={frStyles.title}>{this.props.text}</div>
             </div>
         );
     }
@@ -124,7 +125,7 @@ class IdolWeibo extends Component {
 
                 <div style={{position: 'relative', margin: '5% 15% 2%'}}>
                     <div style={{position: 'relative', zIndex: 5}}>
-                        <Header/></div>
+                        <Header text={"最近发博"}/></div>
                     <hr className={styles.line}/>
                 </div>
 
@@ -161,12 +162,39 @@ class IdolWeibo extends Component {
 export default class Idol extends Component {
     render() {
         return (
-            <div className={styles.wrapper}>
-                {/*<Navigation/>*/}
-                {/*<IdolBanner/>*/}
-                <IdolWeibo/>
-                {/*<Stat />*/}
+            <div>
+                <div className={styles.wrapper}>
+                    <Navigation/>
+                    <IdolBanner/>
+                    {/*<IdolWeibo/>*/}
+                    {/*<Stat />*/}
+                </div>
+                <div className={styles.wrapper}>
+                    <Navigation/>
+                    {/*<IdolBanner/>*/}
+                    {/*<IdolWeibo/>*/}
+                    <Stat />
+                </div>
+                <div className={styles.wrapper}>
+                    <Navigation/>
+                    {/*<IdolBanner/>*/}
+                    <IdolWeibo/>
+                    {/*<Stat />*/}
+                </div>
+                <div className={styles.wrapper}>
+                    <Navigation/>
+                    {/*<IdolBanner/>*/}
+                    <div style={{position: 'relative', margin: '5% 15% 2%'}}>
+                        <div style={{position: 'relative', zIndex: 5}}>
+                            <Header text={"应援活动"}/></div>
+                        <hr className={styles.line}/>
+                    </div>
+                    <Offline/>
+                    {/*<Stat />*/
+                    }
+                </div>
             </div>
+
         )
     }
 }
