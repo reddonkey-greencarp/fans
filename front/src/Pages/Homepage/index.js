@@ -5,6 +5,7 @@ import cxk from './cxk.png'
 import ycy from '../Idol/ycy.png'
 import wyf from './wyf.png'
 import ycyround from '../Idol/ycy-round.png';
+import logo from './logo.png'
 
 
 class SearchBar extends  Component {
@@ -27,7 +28,8 @@ class Search extends Component {
     render(){
         return (
             <div className={styles.wrapper}>
-                <h2 className={styles.homepage}>FFFFFIRE</h2>
+                {/*<h2 className={styles.homepage}>爱豆火拼拼</h2>*/}
+                <img className={styles.homepage} src={logo} />
                 <br />
                 <SearchBar fn={()=>this.props.fn()}/>
             </div>

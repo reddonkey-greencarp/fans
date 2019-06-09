@@ -5,6 +5,11 @@
   src: local('Splatch Regular'), url('./Splatch.woff') format('woff');
 }
 
+img.homepage {
+  margin: 10vh 0 5vh 0;
+  line-height:48px;
+}
+
 h2.homepage {
   margin-top: 15vh;
   font-size:56px;

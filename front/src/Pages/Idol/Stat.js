@@ -39,7 +39,7 @@ class StatNum extends Component{
 class StatScrollItem extends Component {
     render(){
         console.log(this.props);
-        let distance = (this.props.offline - this.props.focus);
+        let distance = (this.props.index - this.props.focus);
         return (
             <div
                 style={{
