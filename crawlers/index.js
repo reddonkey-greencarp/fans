@@ -54,6 +54,15 @@ app.get('/weibo/star', (req, res) => {
     .catch(error => console.log(error));
 });
 
+app.get('/weibo/star/:id', (req, res) => {
+  let { id } = req.params;
+  weiboStar(id)
+    .then(data => {
+      res.send(data);
+    })
+    .catch(error => console.log(error));
+});
+
 app.get('/weibo/star/follower', (req, res) => {
   weiboFollowers()
     .then(data => {
