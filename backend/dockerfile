@@ -1,0 +1,32 @@
+#build stage
+FROM golang:latest AS build
+LABEL maintainer="colinwang"
+
+WORKDIR /build
+
+ENV GO111MODULE=on
+ENV GOPROXY=https://goproxy.cn
+COPY . .
+
+RUN CGO_ENABLED=0 GOOS=linux go build -ldflags 'extldflags="-static"' -o main .
+RUN chmod +x ./main
+
+EXPOSE 8000
+CMD [ "./main" ]
+
+# cert stage
+FROM alpine:3.8 AS certs
+
+RUN apk --no-cache add ca-certificates
+
+# prod stage
+FROM scratch
+
+COPY ./config/ /app/config/
+
+COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+COPY --from=build /build/main /app/main
+
+WORKDIR /app
+
+CMD ["./main"]
