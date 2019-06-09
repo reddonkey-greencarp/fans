@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import 'normalize.css'
 import logo from './logo.svg';
 import './App.css';
@@ -11,24 +11,25 @@ import Feedback from './Pages/Feedback'
 
 
 class App extends Component {
-    state = {isHome: true};
+    state = { isHome: true };
 
     handleClick() {
-        this.setState({isHome: false})
+        this.setState({ isHome: false })
     }
 
     render() {
         return (
             <div className="App">
                 {this.state.isHome
-                    ? <Homepage fn={()=>this.handleClick()}/>
+                    ? <Homepage fn={() => this.handleClick()} />
                     : <div>
-                        <Idol/>
+                        <Idol />
                         {/*<Offline/>*/}
-                        {/*< Support/>*/}
-                        <div className={"wrapper"}><Live/></div>
-                        <div className={"wrapper"}><Feedback/></div>
-                        <div className={"wrapper"}><Fundraising/></div>
+
+                        <div className={"wrapper"}><Live /></div>
+                        <div className={"wrapper"}><Feedback /></div>
+                        <div className={"wrapper"}><Fundraising /></div>
+                        < Support />
                     </div>
                 }
             </div>)
