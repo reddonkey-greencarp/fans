@@ -18,7 +18,7 @@ export default class Support extends Component {
   }
   componentDidMount() {
     window.addEventListener('scroll', this.handleScroll);
-    console.log(this.refs.main.scrollTop)
+    // console.log(this.refs.main.scrollTop)
     if (this.refs.main.screenTop === 0 && this.state.hitMask) {
       this.setState({
         hitMask: 0
@@ -31,7 +31,7 @@ export default class Support extends Component {
 
         console.log(this.refs.mask.style.width)
         if (newWidth < 0) {
-          console.log("done")
+          // console.log("done")
           clearInterval(intervelId)
           this.setState({
             fromBottom: 1,
@@ -44,7 +44,7 @@ export default class Support extends Component {
   }
   handleScroll(e) {
     if (this.refs.main.scrollTop == 0 && this.state.hitMask) {
-      console.log("hit")
+      // console.log("hit")
       this.setState({
         hitMask: 0
       })
@@ -56,7 +56,7 @@ export default class Support extends Component {
 
         console.log(this.refs.mask.style.width)
         if (newWidth < 0) {
-          console.log("done")
+          // console.log("done")
           clearInterval(intervelId)
           this.setState({
             fromBottom: 1,
