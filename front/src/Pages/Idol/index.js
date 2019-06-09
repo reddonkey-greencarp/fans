@@ -80,15 +80,18 @@ class IdolBanner extends Component {
 }
 
 class IdolWeibo extends Component {
-    constructor(props){
+    constructor(props) {
         super(props);
         this.state = {
             data: null,
         }
     }
-    componentDidMount() {
-        starPost().then(data=>this.setState({data})&&console.log(this.state))
 
+    componentDidMount() {
+        starPost().then(data => {
+            this.setState({data})
+            console.log(this.state.data)
+        })
     }
 
     render() {
@@ -107,8 +110,8 @@ class IdolWeibo extends Component {
         return (
             <div className={styles.idolWeiboWrapper}>
 
-                <div style={{position:'relative',margin:'5% 15% 2%'}}>
-                    <div style={{position:'relative',zIndex:5}}>
+                <div style={{position: 'relative', margin: '5% 15% 2%'}}>
+                    <div style={{position: 'relative', zIndex: 5}}>
                         <Header/></div>
                     <hr className={styles.line}/>
                 </div>
@@ -116,17 +119,21 @@ class IdolWeibo extends Component {
 
                 <Slider ref={c => (this.slider = c)} {...settings}>
                     {
-                        Array(5).fill(1).map(v => <div>
+                        this.state.data && this.state.data.items.map((v, index) => <div key={{index}}>
                             <div className={styles.card}>
                                 <div className={styles.wrapper}>
                                     <div className={styles.content}>
-                                        谢谢大家对我的关心，但是我爸爸是个普通人，无关的人请不要接触我爸爸的生活，他是个普通人，我家也不是景点，谢谢🙏你们了拜托了。❤️ ​​
+                                        {v.title}
+                                        {/*这个数组会渲染两次，如何在第二次渲染时插入数据？？*/}
+                                    </div>
+                                    <div className={styles.avatar}>
+                                        <img src={this.state.data.image} alt={'avatar'}/>
                                     </div>
                                 </div>
                                 <div className={styles.cardFooter}>
                                     <div className={styles.func}>
                                         <img src={weiboLike}/>
-                                        <p>22</p>
+                                        <p>{v.likes}</p>
                                     </div>
                                     <div className={styles.func}>
                                         <img src={weiboRwd}/>
@@ -134,7 +141,7 @@ class IdolWeibo extends Component {
                                     </div>
                                     <div className={styles.func}>
                                         <img src={weiboCmt}/>
-                                        <p>22</p>
+                                        <p>{v.comments}</p>
                                     </div>
                                 </div>
                             </div>
@@ -151,7 +158,7 @@ export default class Idol extends Component {
     render() {
         return (
             <div className={styles.wrapper}>
-                <Navigation/>
+                {/*<Navigation/>*/}
                 {/*<IdolBanner/>*/}
                 <IdolWeibo/>
                 {/*<Stat />*/}

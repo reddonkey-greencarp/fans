@@ -2,10 +2,25 @@ import React, {Component} from 'react';
 import styles from './styles.module.scss';
 import Mock from 'mockjs';
 
+import  ycy from './ycy.png'
+
+const follwoers = require('../../api/weibo/followers');
+const superIndex = require('../../api/weibo/superIndex');
+
 class StatNum extends Component{
     render() {
         let {focus} = this.props;
-        let data = this.props.contents[focus];
+        let data = Object.assign({},this.props.contents[focus]);
+        switch (data.id){
+            case 0:
+                data.value= data.value.followers;
+                break;
+            case 2:
+                data.value = data.value.detail;
+                break;
+            default:
+                break;
+        }
         return (
             <div className={styles.statArea}>
                 <h3 className={styles.statNum}>{data.value}</h3>
@@ -69,15 +84,23 @@ class Content {
      * @param active
      * @param title
      * @param value
+     * @param resolver
      */
-    constructor(id=0,text='text here',type='text',value,active=false,title='Number of fans',){
+    constructor(id=0,text='text here',resolver=null,type='text',value,active=false,title='Number of fans'){
         this.id = id;
         this.text = text;
         this.type = type;
         this.active=active;
         this.title=title;
         this.value=parseInt(Math.random()*10000000);
+        this.resolver = resolver;
+        this.cb =()=>{
+            this.resolver && this.resolver().then(data=>{
+                this.value = data
+            });
+        }
     }
+
 }
 
 export default class Stat extends Component {
@@ -93,9 +116,9 @@ export default class Stat extends Component {
         //     }]
         // });
         const contents = [
-            new Content(0,'Weibo Followers'),
-            new Content(1,'Zhihu Followers','ranking',['']),
-            new Content(2,'Chaohua Followers'),
+            new Content(0,'Weibo Followers',follwoers,'ranking'),
+            new Content(1,'Zhihu Followers',null,'ranking',['']),
+            new Content(2,'Chaohua Followers',superIndex),
             new Content(3,'Douban Followers'),
             new Content(4,'Tieba Followers'),
             new Content(5,'Twitter Followers'),
@@ -106,7 +129,20 @@ export default class Stat extends Component {
         };
 
     }
+
+    componentWillMount(){
+        this.setState((state,props)=>{
+            return {
+                contents: state.contents.map(item=>{
+                    item.cb();
+                    return item;
+                })
+            }
+        })
+    }
+
     handleClick(focus){
+
         this.setState({focus})
     }
     render() {

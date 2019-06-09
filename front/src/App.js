@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import 'normalize.css'
 import logo from './logo.svg';
 import './App.css';
 import Homepage from './Pages/Homepage'
@@ -20,9 +21,9 @@ class App extends Component {
 
         <div className="App" >
           {/* <Homepage /> */}
-          {/* <Idol /> */}
+           <Idol />
           <Offline />
-          < Support />
+          {/*< Support />*/}
 
         </div >
       </Slider>
