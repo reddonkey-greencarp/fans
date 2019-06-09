@@ -2,13 +2,13 @@ import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 import Homepage from './Pages/Homepage'
-import Idol from './Pages/Idol'
+import Feedback from './Pages/Feedback'
 
 function App() {
   return (
     <div className="App">
       {/*<Homepage/>*/}
-      <Idol />
+      <Feedback />
     </div>
   );
 }
