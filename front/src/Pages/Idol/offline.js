@@ -9,28 +9,34 @@ export default class Offline extends Component {
     super(props)
     this.state = {
       displayFrom: 0,
-      hitMask: 1
+      hitMask: 1,
+      gg: 1
     }
-    this.handleScroll = this.handleScroll.bind(this)
+    // this.handleScroll = this.handleScroll.bind(this)
+    this.handleClick = this.handleClick.bind(this)
   }
   componentDidMount() {
-    window.addEventListener('scroll', this.handleScroll);
-    if (this.refs.main.offsetTop === 0 && this.state.hitMask) {
-      this.setState({
-        hitMask: 0,
-        displayFrom: 1,
-      })
-    }
+    this.refs.main.addEventListener('click', this.handleClick);
+    // if (this.refs.main.offsetTop === 0 && this.state.hitMask) {
+    //   this.setState({
+    //     hitMask: 0,
+    //     displayFrom: 1,
+    //   })
+    // }
   }
 
-  handleScroll(e) {
-    console.log("gg" + this.refs.main.offsetTop, this.refs.main.clientTop, this.refs.main.scrollTop)
-    if (this.refs.main.scrollTop === 0 && this.state.hitMask) {
-      console.log(this.refs.main.scrollTop)
-      console.log(this.refs.main.screenTop)
+  handleClick(e) {
+    this.setState({
+      gg: 0
+    })
+    // console.log("gg" + this.refs.main.offsetTop, this.refs.main.clientTop, this.refs.main.scrollTop)
+    if (this.state.gg === 0 && this.state.hitMask) {
+      // console.log(this.refs.main.scrollTop)
+      // console.log(this.refs.main.screenTop)
       this.setState({
         hitMask: 0,
         displayFrom: 1,
+        gg: 1
       })
     }
   }
