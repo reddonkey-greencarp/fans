@@ -58,7 +58,7 @@ class YCY extends PureComponent {
     }
 }
 
-class HomePageButton extends PureComponent {
+export class HomePageButton extends PureComponent {
     render() {
         return (
             <div className={styles.homePage}>Home Page</div>

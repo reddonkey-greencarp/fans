@@ -10,6 +10,7 @@ const { NodeHost } = require("../../config/const");
  * @property {string} pic - the url of the pic if has (null for none)
  * @property {number} comments - the number of comments
  * @property {number} likes - the numbers of likes
+ * @property {string} reposts - the number of reports
  */
 
 /**
