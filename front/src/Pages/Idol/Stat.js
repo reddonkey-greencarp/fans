@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import styles from './styles.module.scss';
 import Mock from 'mockjs';
-
+import statimg from './stat.png'
 import ycy from './ycy.png'
 
 const follwoers = require('../../api/weibo/followers');
@@ -23,8 +23,14 @@ class StatNum extends Component{
         }
         return (
             <div className={styles.statArea}>
-                <h3 className={styles.statNum}>{data.value}</h3>
-                <h3 className={styles.statTitle}>{data.title}</h3>
+                {data.id!==2&&<h3 className={styles.statNum}>{data.value}</h3>}
+                {data.id!==2&&<h3 className={styles.statTitle}>{data.title}</h3>}
+                {data.id===2&&data.value.split('　')
+                    .map((v,i)=>
+                        <p
+                            style={{transform:`translateX(${30-i*30}px)`}}
+                            key={v}>{v}</p>
+                    )}
             </div>
         )
     }
@@ -39,10 +45,10 @@ class StatScrollItem extends Component {
                 style={{
                     transform: `translateX(${-Math.abs(distance*40)}px) rotateX(${distance*15}deg) skewX(${-distance*5}deg)`,
                 }}
-                onClick={()=>this.props.handleClick(this.props.offline)}
+                onClick={()=>this.props.handleClick(this.props.index)}
                 className={`${styles.statScrollItem} ${this.props.active ? styles.active: ''}`}>
                     <h1>
-                        {!this.props.active && <small>{this.props.offline || 0} </small>}
+                        {!this.props.active && <small>{this.props.index || 0} </small>}
                         {this.props.text && this.props.active
                             ?  `${this.props.text} ${this.props.text} ${this.props.text} ${this.props.text} `
                             : this.props.text}
@@ -117,8 +123,8 @@ export default class Stat extends Component {
         // });
         const contents = [
             new Content(0,'Weibo Followers',follwoers,'ranking'),
-            new Content(1,'Zhihu Followers',null,'ranking',['']),
-            new Content(2,'Chaohua Followers',superIndex),
+            new Content(1,'Zhihu Followers',null),
+            new Content(2,'Chaohua Followers',superIndex,'ranking'),
             new Content(3,'Douban Followers'),
             new Content(4,'Tieba Followers'),
             new Content(5,'Twitter Followers'),
@@ -157,7 +163,9 @@ export default class Stat extends Component {
                         {activeContent.type === 'text' &&
                         <div
                             style={{width:'100%',height:'100%'}}>
-                            <div className={styles.cardIcon} />
+                            <div className={styles.cardIcon}>
+                                <img src={statimg}></img>
+                            </div>
                             <StatNum
                                 focus={this.state.focus}
                                 contents ={this.state.contents}
@@ -166,7 +174,6 @@ export default class Stat extends Component {
                         {activeContent.type === 'ranking' &&
                         <div
                             style={{width:'100%',height:'100%'}}>
-                            <div className={styles.cardIcon} />
                             <StatNum
                                 focus={this.state.focus}
                                 contents ={this.state.contents}

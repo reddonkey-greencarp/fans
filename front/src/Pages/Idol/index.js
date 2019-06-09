@@ -16,6 +16,7 @@ import weiboCmt from './weibo_cmt.png';
 
 import Stat from './Stat'
 import Offline from './offline.js'
+import Support from '../Support'
 import Fundraising from "../Fundraising";
 
 const starPost = require('../../api/weibo/starPost');
@@ -206,6 +207,11 @@ export default class Idol extends Component {
                                     </div>
                                     <Offline/>
                                 </div>
+                            </div>Support
+                            <div className="section">
+                                <Support />
+                            </div>
+                            <div className="section">
                             </div>
                             <div className="section">
                             </div>
