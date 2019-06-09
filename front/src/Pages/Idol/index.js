@@ -12,6 +12,7 @@ import weiboRwd from './weibo_reward.png';
 import weiboCmt from './weibo_cmt.png';
 
 import Stat from './Stat'
+import Fundraising from "../Fundraising";
 
 const starPost = require('../../api/weibo/starPost');
 
@@ -79,6 +80,17 @@ class IdolBanner extends Component {
     }
 }
 
+class FuncBtn extends Component {
+    render() {
+        return (
+            <div className={styles.func}>
+                <img src={this.props.img}/>
+                <p>{this.props.data}</p>
+            </div>
+        )
+    }
+}
+
 class IdolWeibo extends Component {
     constructor(props) {
         super(props);
@@ -96,7 +108,7 @@ class IdolWeibo extends Component {
 
     render() {
         const settings = {
-            dots: true,
+            dots: !true,
             infinite: true,
             className: styles.idolWeibo,
             centerMode: true,
@@ -127,22 +139,14 @@ class IdolWeibo extends Component {
                                         {/*这个数组会渲染两次，如何在第二次渲染时插入数据？？*/}
                                     </div>
                                     <div className={styles.avatar}>
-                                        <img src={this.state.data.image} alt={'avatar'}/>
+                                        <img src={v.pic ? v.pic : this.state.data.image} alt={'avatar'}/>
                                     </div>
                                 </div>
                                 <div className={styles.cardFooter}>
-                                    <div className={styles.func}>
-                                        <img src={weiboLike}/>
-                                        <p>{v.likes}</p>
-                                    </div>
-                                    <div className={styles.func}>
-                                        <img src={weiboRwd}/>
-                                        <p>22</p>
-                                    </div>
-                                    <div className={styles.func}>
-                                        <img src={weiboCmt}/>
-                                        <p>{v.comments}</p>
-                                    </div>
+                                    <FuncBtn img={weiboLike} data={v.likes}/>
+                                    <FuncBtn img={weiboRwd} data={v.reposts}/>
+                                    <FuncBtn img={weiboCmt} data={v.comments}/>
+
                                 </div>
                             </div>
                         </div>)

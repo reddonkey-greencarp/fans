@@ -21,7 +21,7 @@ h1.homepage {
     display: flex;
     align-items: center;
     //width:803px;
-    margin: 0 24vw;
+    margin: 0 24%;
     height:72px;
     background:rgba(255,255,255,1);
     box-shadow:0px 6px 20px rgba(222,104,104,0.2);
@@ -34,7 +34,7 @@ h1.homepage {
       margin: 12px 0 0 4px;
       //margin: 0 20vw;
       height:72px;
-      width:52vw;
+      width:calc(52% - 2px);
       border:2px solid rgba(186,80,80,1);
       border-radius: 65px;
       z-index: -10;
@@ -46,6 +46,7 @@ h1.homepage {
       height: 100%;
       img {
         width: 100%;
+        height: auto;
       }
     }
     .searchText{
