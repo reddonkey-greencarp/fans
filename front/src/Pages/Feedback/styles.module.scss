@@ -12,7 +12,7 @@
 
 .circle {
   cursor: pointer;
-  position: fixed;
+  position: absolute;
   background-size: cover;
   width: 289px;
   height: 289px;
@@ -50,7 +50,7 @@
   @extend .circle;
   background-image: url("./circle.png");
   bottom: 100px;
-  left: 565px;
+  left: 35%;
 }
 
 .circle2:hover {
@@ -81,8 +81,8 @@
 .circle4 {
   @extend .circle;
   background-image: url("./circle.png");
-  bottom: 600px;
-  right: -50px;
+  top: 0;
+  right: 10px;
 }
 
 .circle4:hover {
@@ -90,12 +90,12 @@
 }
 
 .messageBox {
-  position: fixed;
+  position: absolute;
   width: 289px;
   height: 80px;
   background-image: url("./messageBox.png");
   background-size: cover;
-  left: 565px;
+  left: 35%;
   bottom: 420px;
   display: flex;
   justify-content: center;

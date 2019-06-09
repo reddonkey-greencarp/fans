@@ -122,7 +122,7 @@ export default class Stat extends Component {
         //     }]
         // });
         const contents = [
-            new Content(0,'Weibo Followers',follwoers,'ranking'),
+            new Content(0,'Weibo Followers',follwoers),
             new Content(1,'Zhihu Followers',null),
             new Content(2,'Chaohua Followers',superIndex,'ranking'),
             new Content(3,'Douban Followers'),

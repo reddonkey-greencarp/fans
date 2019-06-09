@@ -1,8 +1,9 @@
 import React,{Component} from 'react';
 import styles from './styles.module.scss';
 import searchIcon from './searchIcon.svg';
-import cxk from './cxk.jpg'
+import cxk from './cxk.png'
 import ycy from '../Idol/ycy.png'
+import wyf from './wyf.png'
 import ycyround from '../Idol/ycy-round.png';
 
 
@@ -10,7 +11,8 @@ class SearchBar extends  Component {
     render() {
         return (
             <div className={styles.searchBar}>
-                <div className={styles.searchIcon}>
+                <div onClick={()=>this.props.fn()}
+                    className={styles.searchIcon}>
                     <img src={searchIcon} alt={"search icon"}/>
                 </div>
                 <div className={styles.searchText}>
@@ -25,10 +27,10 @@ class Search extends Component {
     render(){
         return (
             <div className={styles.wrapper}>
-                <h1 className={styles.homepage}>FFFFFIRE</h1>
-                <SearchBar />
+                <h2 className={styles.homepage}>FFFFFIRE</h2>
+                <br />
+                <SearchBar fn={()=>this.props.fn()}/>
             </div>
-
         );
     }
 }
@@ -39,7 +41,7 @@ class IdolWrapper extends Component {
             <div className={styles.idolArea}>
                 <Idol img={ycyround} name={"Yang Chaoyue"} />
                 <Idol img={cxk} name={"Cai Xukun"}/>
-                <Idol img={ycy} name={"Yang Chaoyue"} />
+                <Idol img={wyf} name={"Wu Yifan"} />
             </div>
         )
     }
@@ -49,7 +51,8 @@ class Idol extends Component {
     render(){
         return (
             <div className={styles.idol}>
-                <img className={styles.avatar} src={this.props.img} alt={"idol avatar"} />
+                <img  className={styles.avatar} src={this.props.img} alt={"idol avatar"} />
+                <div className={styles.avatarStroke}/>
                 <p className={styles.name}>{this.props.name}</p>
             </div>
         )
@@ -62,7 +65,7 @@ export default class Homepage extends Component {
             <div style={{minHeight: '100vh',width:'100%',overflowY:'hidden'}
 
             }>
-                <Search />
+                <Search fn={()=>this.props.fn()} />
                 <IdolWrapper />
             </div>
         )

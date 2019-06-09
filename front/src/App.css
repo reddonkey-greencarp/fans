@@ -36,3 +36,9 @@
 body {
   cursor: url('cursor.png'), default;
 }
+
+.wrapper {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+}

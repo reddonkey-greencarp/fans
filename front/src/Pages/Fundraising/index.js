@@ -46,17 +46,17 @@ class Table extends PureComponent {
     }
 }
 
-class YCY extends PureComponent {
-    render() {
-        return (
-            <div>
-                <img src={ycy} className={styles.ycy} />
-                <div className={styles.yShadow}>Yang</div>
-                <div className={styles.cyShadow}>ChaoYue</div>
-            </div>
-        );
-    }
-}
+// class YCY extends PureComponent {
+//     render() {
+//         return (
+//             <div>
+//                 <img src={ycy} className={styles.ycy} />
+//                 <div className={styles.yShadow}>Yang</div>
+//                 <div className={styles.cyShadow}>ChaoYue</div>
+//             </div>
+//         );
+//     }
+// }
 
 export class HomePageButton extends PureComponent {
     render() {
@@ -74,7 +74,7 @@ export default class Fundraising extends PureComponent {
                     <HomePageButton />
                     <Header />
                     <Table />
-                    <YCY />
+                    {/*<YCY />*/}
                 </div>
             </div>
         );

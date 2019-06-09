@@ -4,7 +4,8 @@
 }
 
 .wrapper {
-  background: #402D7F;
+  background: url("./bg.png");
+  background-size: cover;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -91,13 +92,13 @@
 }
 
 .ycy {
-  position: fixed;
+  position: absolute;
   right: -300px;
   bottom: -100px;
 }
 
 .yShadow {
-  position: fixed;
+  position: absolute;
   font-family: 'Open Sans';
   font-size: 200px;
   color: rgba(0, 0, 0, 0);
@@ -107,7 +108,7 @@
 }
 
 .cyShadow {
-  position: fixed;
+  position: absolute;
   font-family: 'Open Sans';
   font-size: 200px;
   color: rgba(0, 0, 0, 0);
@@ -117,7 +118,7 @@
 }
 
 .homePage {
-  position: fixed;
+  position: absolute;
   font-family: 'Open Sans';
   font-size: 32px;
   color: rgba(0, 0, 0, 0);
