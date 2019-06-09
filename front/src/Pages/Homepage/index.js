@@ -50,7 +50,7 @@ class IdolWrapper extends Component {
 }
 
 class Idol extends Component {
-    render(){
+    render(
         return (
             <div className={styles.idol}>
                 <img  className={styles.avatar} src={this.props.img} alt={"idol avatar"} />
