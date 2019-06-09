@@ -33,11 +33,11 @@ $img-bottom: 16%;
 }
 
 .wrapper {
-  margin: 0;
+  margin: -15% 0 0 0;
   padding: 0;
   height: 100vh;
   position: relative;
-  background: url("./back.png") no-repeat -100px -43px;
+  //background: url("back.png") no-repeat -100px -43px;
 }
 
 .imgWrapper {

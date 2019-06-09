@@ -2,6 +2,7 @@ import React,{Component} from 'react';
 import styles from './styles.module.scss';
 import searchIcon from './searchIcon.svg';
 import cxk from './cxk.jpg'
+import ycy from '../Idol/ycy.png'
 
 class SearchBar extends  Component {
     render() {
@@ -34,9 +35,9 @@ class IdolWrapper extends Component {
     render(){
         return (
             <div className={styles.idolArea}>
-                <Idol />
-                <Idol />
-                <Idol />
+                <Idol img={cxk} name={"Cai Xukun"}/>
+                <Idol img={ycy} name={"Yang Chaoyue"} />
+                <Idol img={ycy} name={"Yang Chaoyue"} />
             </div>
         )
     }
@@ -46,8 +47,8 @@ class Idol extends Component {
     render(){
         return (
             <div className={styles.idol}>
-                <img className={styles.avatar} src={cxk} />
-                <p className={styles.name}>Cai Xukun</p>
+                <img className={styles.avatar} src={this.props.img} alt={"idol avatar"} />
+                <p className={styles.name}>{this.props.name}</p>
             </div>
         )
     }
@@ -56,7 +57,9 @@ class Idol extends Component {
 export default class Homepage extends Component {
     render(){
         return (
-            <div>
+            <div style={{minHeight: '100vh',width:'100%',overflowY:'hidden'}
+
+            }>
                 <Search />
                 <IdolWrapper />
             </div>

@@ -1,0 +1,15 @@
+appname: fans
+
+mode: debug
+
+db: 
+  username: root
+  password: password
+  url: localhost:3306
+  name: names
+
+port: "8000"
+
+host:
+  backend: localhost
+  frontend: localhost

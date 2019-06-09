@@ -14,7 +14,7 @@ export const setQuestionsEpic: Epic<SetQuestions> = (action$) =>
         ofType(SET_QUESTIONS),
         mergeMap(({ questions }) => {
             const token = checkToken();
-            return ajax.put(`${API}/star/`, JSON.stringify(questions), {
+            return ajax.post(`${API}/question/`, JSON.stringify(questions), {
                 'Authorization': `Bearer ${token}`,
                 'Content-Type': 'application/json',
             }).pipe(

@@ -26,11 +26,11 @@ module.exports = (indexID = id) => {
             title: `微博超话 - ${resp.body.data.pageInfo.page_title}`,
             link: `https://weibo.com/p/${indexID}/super_index`,
             description: `#${resp.body.data.pageInfo.page_title}# 的超话`,
-            detile: `${resp.body.data.pageInfo.desc_more}`,
+            detail: `${resp.body.data.pageInfo.desc_more[0]}`,
             rank: `${resp.body.data.pageInfo.portrait_sub_text}`,
           });
-        } catch {
-          reject();
+        } catch (e) {
+          reject(e);
         }
       });
   });

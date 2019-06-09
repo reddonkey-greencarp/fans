@@ -40,7 +40,7 @@ module.exports = (uid = '5644764907') => {
           title: `${name}的微博`,
           link: `http://weibo.com/${uid}/`,
           image: profileImageUrl,
-          item: resp.body.data.cards
+          items: resp.body.data.cards
             .filter(
               item =>
                 item.mblog && !item.mblog.isTop && !item.mblog.retweeted_status
@@ -55,6 +55,8 @@ module.exports = (uid = '5644764907') => {
                 content: content,
                 comments: item.mblog.comments_count,
                 likes: item.mblog.attitudes_count,
+                pic: item.mblog.pics ? item.mblog.pics[0].url : null,
+                reposts: item.mblog.reposts_count,
                 link: `https://weibo.com/${uid}/${item.mblog.bid}`,
               };
             }),

@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import styles from './styles.module.scss'
+import styles from './olStyles.module.scss'
 import planeImg from './plane.png'
 import concertImg from './concert.png'
 import magazineImg from './magazine.png'
@@ -37,6 +37,7 @@ export default class Offline extends Component {
   render() {
     return (
       <div className={styles.wrapper} ref="main">
+        {/*<Navigation />*/}
         <div className={styles.imgWrapper}>
           <img src={planeImg} className={this.state.displayFrom ? styles.fromBottom1 : styles.imageStyle} alt="" />
           <img src={concertImg} className={this.state.displayFrom ? styles.fromBottom2 : styles.imageStyle} alt="" />
