@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import 'normalize.css'
 import logo from './logo.svg';
 import './App.css';
@@ -11,12 +11,12 @@ import Support from './Pages/Support'
 class App extends Component {
     render() {
         return (
-                <div className="App">
-                    <Homepage/>
-                    <Idol/>
-                    {/*<Offline/>*/}
-                    {/*< Support/>*/}
-                </div>
+            <div className="App">
+                <Homepage />
+                <Idol />
+                {/*<Offline/>*/}
+                < Support />
+            </div>
         );
     }
 }

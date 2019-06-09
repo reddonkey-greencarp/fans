@@ -9,44 +9,29 @@ import titleImg from './title.png'
 export default class Support extends Component {
   constructor(props) {
     super(props)
-    this.handleScroll = this.handleScroll.bind(this)
+    // this.handleScroll = this.handleScroll.bind(this)
+    this.handleClick = this.handleClick.bind(this)
     this.state = {
       hitMask: 1,
       fromBottom: 0,
-      haveMoney: 2333
+      haveMoney: 2333,
+      gg: 1,
     }
   }
   componentDidMount() {
+    console.log(this.state.gg)
     window.addEventListener('scroll', this.handleScroll);
+    this.refs.main.addEventListener('click', this.handleClick);
     // console.log(this.refs.main.scrollTop)
-    if (this.refs.main.screenTop === 0 && this.state.hitMask) {
-      this.setState({
-        hitMask: 0
-      })
-      let intervelId = setInterval(() => {
-        let older = this.refs.mask.getBoundingClientRect().width
-        let newWidth = older - 30
-        this.refs.mask.style.width = newWidth + "px"
-        if (newWidth < 0) this.refs.mask.style.width = 0
-
-        console.log(this.refs.mask.style.width)
-        if (newWidth < 0) {
-          // console.log("done")
-          clearInterval(intervelId)
-          this.setState({
-            fromBottom: 1,
-          })
-        }
-      }, 15)
-    }
-
-
   }
-  handleScroll(e) {
-    if (this.refs.main.scrollTop == 0 && this.state.hitMask) {
-      // console.log("hit")
+  handleClick(e) {
+    this.setState({
+      gg: 0
+    })
+    if (this.state.gg === 0 && this.state.hitMask) {
       this.setState({
-        hitMask: 0
+        hitMask: 0,
+        gg: 1
       })
       let intervelId = setInterval(() => {
         let older = this.refs.mask.getBoundingClientRect().width
@@ -54,7 +39,7 @@ export default class Support extends Component {
         this.refs.mask.style.width = newWidth + "px"
         if (newWidth < 0) this.refs.mask.style.width = 0
 
-        console.log(this.refs.mask.style.width)
+        // console.log(this.refs.mask.style.width)
         if (newWidth < 0) {
           // console.log("done")
           clearInterval(intervelId)
@@ -65,6 +50,29 @@ export default class Support extends Component {
       }, 15)
     }
   }
+  // handleScroll(e) {
+  //   if (this.state.gg == 0 && this.state.hitMask) {
+  //     // console.log("hit")
+  //     this.setState({
+  //       hitMask: 0
+  //     })
+  //     let intervelId = setInterval(() => {
+  //       let older = this.refs.mask.getBoundingClientRect().width
+  //       let newWidth = older - 30
+  //       this.refs.mask.style.width = newWidth + "px"
+  //       if (newWidth < 0) this.refs.mask.style.width = 0
+
+  //       console.log(this.refs.mask.style.width)
+  //       if (newWidth < 0) {
+  //         // console.log("done")
+  //         clearInterval(intervelId)
+  //         this.setState({
+  //           fromBottom: 1,
+  //         })
+  //       }
+  //     }, 15)
+  //   }
+  // }
   render() {
     return (
       <div>
