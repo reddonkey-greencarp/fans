@@ -55,6 +55,7 @@ module.exports = (uid = '5644764907') => {
                 content: content,
                 comments: item.mblog.comments_count,
                 likes: item.mblog.attitudes_count,
+                reposts: item.mblog.reposts_count,
                 link: `https://weibo.com/${uid}/${item.mblog.bid}`,
               };
             }),
