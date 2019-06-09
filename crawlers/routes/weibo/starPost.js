@@ -36,6 +36,7 @@ module.exports = (uid = '5644764907') => {
         json: true,
       })
       .then(resp => {
+        console.log(JSON.stringify(resp.body));
         resolve({
           title: `${name}的微博`,
           link: `http://weibo.com/${uid}/`,
@@ -55,6 +56,7 @@ module.exports = (uid = '5644764907') => {
                 content: content,
                 comments: item.mblog.comments_count,
                 likes: item.mblog.attitudes_count,
+                pic: item.mblog.pic ? item.mblog.pic[0].url : null,
                 reposts: item.mblog.reposts_count,
                 link: `https://weibo.com/${uid}/${item.mblog.bid}`,
               };
