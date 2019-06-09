@@ -1,11 +1,30 @@
 
 .wrapper {
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
   background-image: url("./bg.png");
   background-size: cover;
   background-position: left bottom;
 }
 
-.buttonContainer {
+.frame {
+  margin-left: 70px;
+  margin-bottom: 30px;
+  width: 600px;
+  height: 400px;
+}
 
+.buttonContainer {
+  display: flex;
+  color: #F5BAAD;
+  font-size: 14px;
+  margin-left: 60px;
+  margin-bottom: 20px;
+}
+
+.button {
+  margin: 17px;
 }
