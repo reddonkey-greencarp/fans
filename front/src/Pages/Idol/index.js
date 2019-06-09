@@ -1,6 +1,5 @@
 import Slider from "react-slick";
 import React, {PureComponent, Component} from 'react';
-import ReactFullpage from '@fullpage/react-fullpage';
 
 
 import styles from './styles.module.scss';
@@ -9,6 +8,7 @@ import 'slick-carousel/slick/slick-theme.scss';
 import 'slick-carousel/slick/slick.scss';
 
 import ycy from './ycy.png';
+
 import menuIcon from './menu.png';
 import weiboLike from './weibo_like.png';
 import weiboRwd from './weibo_reward.png';
@@ -17,6 +17,7 @@ import weiboCmt from './weibo_cmt.png';
 import Stat from './Stat'
 import Offline from './offline.js'
 import Support from '../Support'
+import Live from '../Live'
 import Fundraising from "../Fundraising";
 
 const starPost = require('../../api/weibo/starPost');
@@ -168,89 +169,41 @@ class IdolWeibo extends Component {
 export default class Idol extends Component {
     render() {
         return (
-            <ReactFullpage
-                render={({ state, fullpageApi }) => {
-                    return (
-                        <ReactFullpage.Wrapper>
-                            <div className="section">
-                                <div className={styles.wrapper}>
-                                    <Navigation/>
-                                    <IdolBanner/>
-                                    {/*<IdolWeibo/>*/}
-                                    {/*<Stat />*/}
-                                </div>
-                            </div>
-                            <div className="section">
-                                <div className={styles.wrapper}>
-                                    <Navigation/>
-                                    {/*<IdolBanner/>*/}
-                                    {/*<IdolWeibo/>*/}
-                                    <Stat />
-                                </div>
-                            </div>
-                            <div className="section">
-                                <div className={styles.wrapper}>
-                                    <Navigation/>
-                                    {/*<IdolBanner/>*/}
-                                    <IdolWeibo/>
-                                    {/*<Stat />*/}
-                                </div>
-                            </div>
-                            <div className="section">
-                                <div className={styles.wrapper}>
-                                    <Navigation/>
-                                    {/*<IdolBanner/>*/}
-                                    <div style={{position: 'relative', margin: '5% 15% 2%'}}>
-                                        <div style={{position: 'relative', zIndex: 5}}>
-                                            <Header text={"应援活动"}/></div>
-                                        <hr className={styles.line}/>
-                                    </div>
-                                    <Offline/>
-                                </div>
-                            </div>Support
-                            <div className="section">
-                                <Support />
-                            </div>
-                            <div className="section">
-                            </div>
-                            <div className="section">
-                            </div>
-                        </ReactFullpage.Wrapper>
-                    );
-                }}
-            />
-            // <div>
-            //     <div className={styles.wrapper}>
-            //         <Navigation/>
-            //         <IdolBanner/>
-            //         {/*<IdolWeibo/>*/}
-            //         {/*<Stat />*/}
-            //     </div>
-            //     <div className={styles.wrapper}>
-            //         <Navigation/>
-            //         {/*<IdolBanner/>*/}
-            //         {/*<IdolWeibo/>*/}
-            //         <Stat />
-            //     </div>
-            //     <div className={styles.wrapper}>
-            //         <Navigation/>
-            //         {/*<IdolBanner/>*/}
-            //         <IdolWeibo/>
-            //         {/*<Stat />*/}
-            //     </div>
-            //     <div className={styles.wrapper}>
-            //         <Navigation/>
-            //         {/*<IdolBanner/>*/}
-            //         <div style={{position: 'relative', margin: '5% 15% 2%'}}>
-            //             <div style={{position: 'relative', zIndex: 5}}>
-            //                 <Header text={"应援活动"}/></div>
-            //             <hr className={styles.line}/>
-            //         </div>
-            //         <Offline/>
-            //         {/*<Stat />*/
-            //         }
-            //     </div>
-            // </div>
+
+
+            <div>
+                <div className={styles.wrapper}>
+                    <Navigation/>
+                    <IdolBanner/>
+                    {/*<IdolWeibo/>*/}
+                    {/*<Stat />*/}
+                </div>
+                <div className={styles.wrapper}>
+                    {/*<Navigation/>*/}
+                    {/*<IdolBanner/>*/}
+                    {/*<IdolWeibo/>*/}
+                    <Stat />
+                </div>
+                <div className={styles.wrapper}>
+                    {/*<Navigation/>*/}
+                    {/*<IdolBanner/>*/}
+                    <IdolWeibo/>
+                    {/*<Stat />*/}
+                </div>
+                <div className={styles.wrapper}>
+                    {/*<Navigation/>*/}
+                    {/*<IdolBanner/>*/}
+                    <div style={{position: 'relative', margin: '5% 15% 2%'}}>
+                        <div style={{position: 'relative', zIndex: 5}}>
+                            <Header text={"应援活动"}/></div>
+                        <hr className={styles.line}/>
+                    </div>
+                    <Offline/>
+                    {/*<Stat />*/
+                    }
+                </div>
+
+            </div>
 
         )
     }

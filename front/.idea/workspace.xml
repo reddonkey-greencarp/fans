@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ac7a9dc9-d9ca-43e9-9e70-dcf4af115150" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/Pages/Idol/Stat.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/Stat.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/Homepage/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Homepage/index.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/Pages/Idol/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -19,11 +19,11 @@
     <splitter split-orientation="horizontal" split-proportion="0.5950704">
       <split-first>
         <leaf>
-          <file pinned="false" current-in-tab="false">
+          <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1705">
-                  <caret line="211" column="40" selection-start-line="211" selection-start-column="33" selection-end-line="211" selection-end-column="40" />
+                <state relative-caret-position="62">
+                  <caret line="194" column="36" lean-forward="true" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
                   <folding>
                     <element signature="e#0#33#0" expanded="true" />
                     <element signature="n#Navigation#0" />
@@ -35,11 +35,35 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="true">
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/Pages/Homepage/index.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="93">
+                  <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#38#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/src/App.js">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="248">
+                  <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/Stat.js">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="527">
-                  <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+                <state relative-caret-position="-3968">
+                  <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="17" />
                   <folding>
                     <element signature="e#0#39#0" expanded="true" />
                     <element signature="n#StatScroll#0" />
@@ -52,7 +76,7 @@
             <entry file="file://$PROJECT_DIR$/src/Pages/Support/index.js">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="1354">
-                  <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+                  <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
                   <folding>
                     <element signature="e#0#40#0" expanded="true" />
                   </folding>
@@ -78,7 +102,7 @@
             <entry file="file://$PROJECT_DIR$/src/Pages/Fundraising/styles.module.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="450">
-                  <caret line="126" selection-start-line="126" selection-end-line="126" />
+                  <caret line="127" selection-start-line="127" selection-end-line="127" />
                 </state>
               </provider>
             </entry>
@@ -104,27 +128,6 @@
               </provider>
             </entry>
           </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/src/App.js">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="75">
-                  <caret line="7" selection-start-line="7" selection-end-line="7" />
-                  <folding>
-                    <element signature="e#0#39#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/package.json">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="279">
-                  <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
-                </state>
-              </provider>
-            </entry>
-          </file>
         </leaf>
       </split-first>
       <split-second>
@@ -132,8 +135,8 @@
           <file pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="387">
-                  <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+                <state relative-caret-position="1131">
+                  <caret line="271" selection-start-line="271" selection-end-line="271" />
                 </state>
               </provider>
             </entry>
@@ -166,7 +169,7 @@
             <entry file="file://$PROJECT_DIR$/src/Pages/Idol/olStyles.module.scss">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="496">
-                  <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+                  <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
                 </state>
               </provider>
             </entry>
@@ -188,8 +191,8 @@
       <find>24</find>
       <find>Header</find>
       <find>nav</find>
-      <find>Offline</find>
       <find>p</find>
+      <find>Offline</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -213,15 +216,15 @@
         <option value="$PROJECT_DIR$/src/playground/mocktest.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/jnw.scss" />
         <option value="$PROJECT_DIR$/src/Pages/Homepage/style.css" />
-        <option value="$PROJECT_DIR$/src/Pages/Homepage/index.js" />
         <option value="$PROJECT_DIR$/src/Pages/Homepage/styles.module.scss" />
         <option value="$PROJECT_DIR$/src/Pages/offline/index.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/offline.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/olStyles.module.scss" />
-        <option value="$PROJECT_DIR$/src/Pages/Idol/index.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/Stat.js" />
         <option value="$PROJECT_DIR$/src/Pages/Idol/styles.module.scss" />
+        <option value="$PROJECT_DIR$/src/Pages/Homepage/index.js" />
+        <option value="$PROJECT_DIR$/src/Pages/Idol/index.js" />
       </list>
     </option>
   </component>
@@ -260,6 +263,13 @@
               <item name="front" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="Pages" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="front" type="b2602c69:ProjectViewProjectNode" />
+              <item name="front" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="Pages" type="462c0819:PsiDirectoryNode" />
+              <item name="Homepage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="front" type="b2602c69:ProjectViewProjectNode" />
@@ -323,16 +333,16 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="69334000" />
+    <option name="totallyTimeSpent" value="70102000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="2729" y="-7" width="2062" height="1136" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15893386" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.15893386" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25664622" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="0" visible="true" weight="0.25664622" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="2" weight="0.32924336" />
       <window_info anchor="bottom" id="Docker" order="3" show_stripe_button="false" />
@@ -415,26 +425,6 @@
     <entry file="file://$PROJECT_DIR$/src/Pages/Idol/ycy.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Homepage/styles.module.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1209">
-          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
-          <folding>
-            <element signature="e#11#164#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Homepage/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="278">
-          <caret line="61" column="14" selection-start-line="61" selection-start-column="14" selection-end-line="61" selection-end-column="14" />
-          <folding>
-            <element signature="e#0#38#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/Idol/back.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
@@ -451,20 +441,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/App.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="7" selection-start-line="7" selection-end-line="7" />
-          <folding>
-            <element signature="e#0#39#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="279">
-          <caret line="9" column="30" lean-forward="true" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
+          <caret line="9" column="30" selection-start-line="9" selection-start-column="30" selection-end-line="9" selection-end-column="30" />
         </state>
       </provider>
     </entry>
@@ -478,7 +458,7 @@
     <entry file="file://$PROJECT_DIR$/src/Pages/Fundraising/styles.module.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
-          <caret line="126" selection-start-line="126" selection-end-line="126" />
+          <caret line="127" selection-start-line="127" selection-end-line="127" />
         </state>
       </provider>
     </entry>
@@ -495,38 +475,44 @@
     <entry file="file://$PROJECT_DIR$/src/Pages/Idol/olStyles.module.scss">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="496">
-          <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
+          <caret line="40" column="1" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Support/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Pages/Homepage/styles.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1354">
-          <caret line="71" column="11" lean-forward="true" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+        <state relative-caret-position="1209">
+          <caret line="68" column="17" selection-start-line="68" selection-start-column="17" selection-end-line="68" selection-end-column="17" />
           <folding>
-            <element signature="e#0#40#0" expanded="true" />
+            <element signature="e#11#164#0" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
+    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1705">
-          <caret line="211" column="40" selection-start-line="211" selection-start-column="33" selection-end-line="211" selection-end-column="40" />
+        <state relative-caret-position="343">
+          <caret line="401" column="21" selection-start-line="401" selection-start-column="21" selection-end-line="401" selection-end-column="21" />
           <folding>
-            <element signature="e#0#33#0" expanded="true" />
-            <element signature="n#Navigation#0" />
-            <element signature="n#NavItemArea#0" />
-            <element signature="n#IdolBanner#0" />
-            <element signature="n#FuncBtn#0" />
+            <element signature="e#172#1334#0" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/App.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="248">
+          <caret line="8" lean-forward="true" selection-start-line="8" selection-end-line="8" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Pages/Idol/Stat.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="527">
-          <caret line="35" column="5" lean-forward="true" selection-start-line="35" selection-start-column="5" selection-end-line="35" selection-end-column="5" />
+        <state relative-caret-position="-3968">
+          <caret line="10" selection-start-line="10" selection-end-line="12" selection-end-column="17" />
           <folding>
             <element signature="e#0#39#0" expanded="true" />
             <element signature="n#StatScroll#0" />
@@ -534,10 +520,37 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/styles.module.scss">
+    <entry file="file://$PROJECT_DIR$/src/Pages/Support/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="271" lean-forward="true" selection-start-line="271" selection-end-line="271" />
+        <state relative-caret-position="1354">
+          <caret line="71" column="11" selection-start-line="71" selection-start-column="11" selection-end-line="71" selection-end-column="11" />
+          <folding>
+            <element signature="e#0#40#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/Homepage/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="93">
+          <caret line="48" column="13" lean-forward="true" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#38#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Pages/Idol/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="62">
+          <caret line="194" column="36" lean-forward="true" selection-start-line="194" selection-start-column="36" selection-end-line="194" selection-end-column="36" />
+          <folding>
+            <element signature="e#0#33#0" expanded="true" />
+            <element signature="n#Navigation#0" />
+            <element signature="n#NavItemArea#0" />
+            <element signature="n#IdolBanner#0" />
+            <element signature="n#FuncBtn#0" />
+          </folding>
         </state>
       </provider>
     </entry>

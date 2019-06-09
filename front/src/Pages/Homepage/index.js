@@ -3,6 +3,8 @@ import styles from './styles.module.scss';
 import searchIcon from './searchIcon.svg';
 import cxk from './cxk.jpg'
 import ycy from '../Idol/ycy.png'
+import ycyround from '../Idol/ycy-round.png';
+
 
 class SearchBar extends  Component {
     render() {
@@ -35,8 +37,8 @@ class IdolWrapper extends Component {
     render(){
         return (
             <div className={styles.idolArea}>
+                <Idol img={ycyround} name={"Yang Chaoyue"} />
                 <Idol img={cxk} name={"Cai Xukun"}/>
-                <Idol img={ycy} name={"Yang Chaoyue"} />
                 <Idol img={ycy} name={"Yang Chaoyue"} />
             </div>
         )
