@@ -1,6 +1,5 @@
-const axios = require("axios");
-const { NodeHost } = require("../../config/const");
-
+import { NodeHost } from "../../config/const";
+import axios from "axios";
 /**
  * @typedef FollowersRes
  * @type {Object}
@@ -11,7 +10,7 @@ const { NodeHost } = require("../../config/const");
 /**
  * @returns {Promise.<FollowersRes>}
  */
-module.exports = async () => {
+export default async () => {
   try {
     let resp = await axios.get(NodeHost + "/weibo/star/follower");
     return resp.data;

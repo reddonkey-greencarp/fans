@@ -1,6 +1,5 @@
-const axios = require("axios");
-const { NodeHost } = require("../../config/const");
-
+import { NodeHost } from "../../config/const";
+import axios from "axios";
 /**
  * @typedef Post
  * @type {Object}
@@ -25,7 +24,7 @@ const { NodeHost } = require("../../config/const");
  * @default "杨超越"
  * @returns {Promise.<KeywordRes>} - data the result data
  */
-module.exports = async (key = "杨超越") => {
+export default async (key = "杨超越") => {
   try {
     let resp = await axios.get(
       NodeHost + "/weibo/keyword/" + encodeURIComponent(key)

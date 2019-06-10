@@ -1,4 +1,4 @@
-module.exports = {
-  NodeHost: "http://crawlers:3001",
-  GoHost: "http://backend:8000"
-};
+const Host = "hackday.outsiders.top";
+const NodeHost = `http://${Host}:3001`;
+const GoHost = `http://${Host}:8000`;
+export { NodeHost, GoHost };

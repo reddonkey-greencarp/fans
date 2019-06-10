@@ -1,5 +1,5 @@
-const axios = require("axios");
-const { NodeHost } = require("../../config/const");
+import { NodeHost } from "../../config/const";
+import axios from "axios";
 /**
  * @typedef SuperIndexRes
  * @type {Object}
@@ -14,7 +14,7 @@ const { NodeHost } = require("../../config/const");
 /**
  * @returns {Promise.<SuperIndexRes>}
  */
-module.exports = async () => {
+export default async () => {
   try {
     let resp = await axios.get(NodeHost + "/weibo/super_index");
     return resp.data;
