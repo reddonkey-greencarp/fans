@@ -34,6 +34,7 @@ func init() {
 	for _, t := range models.Tables {
 		wg.Add(1)
 		go func(table models.Table) {
+			db.CreateTable(table)
 			if err := db.AutoMigrate(table).Error; err != nil {
 				panic(err.Error())
 			}
