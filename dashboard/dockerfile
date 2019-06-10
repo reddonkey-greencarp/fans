@@ -10,13 +10,10 @@ COPY . .
 
 RUN yarn build
 
-# cert stage
 FROM alpine:3.8 AS certs
 
 RUN apk --no-cache add ca-certificates
 
-# prod stage
-FROM scratch
-
-COPY --from=certs /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
 COPY --from=build /usr/src/app/build /build
+
+CMD ['sh']
