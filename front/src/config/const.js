@@ -1,4 +1,4 @@
 module.exports = {
-  NodeHost: "http://localhost:3001",
-  GoHost: "http://localhost:8000"
+  NodeHost: "http://crawlers:3001",
+  GoHost: "http://backend:8000"
 };
